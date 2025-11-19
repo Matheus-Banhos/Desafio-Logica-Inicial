@@ -1,0 +1,37 @@
+class Heroi {
+    constructor(nome, idade, tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.tipo = tipo.toLowerCase();
+    }
+
+    atacar() {
+        let ataque;
+
+        switch (this.tipo) {
+            case "mago":
+                ataque = "usando magias";
+                break;
+            case "guerreiro":
+                ataque = "usou uma espada";
+                break;
+            case "monge":
+                ataque = "usou artes marciais";
+                break;
+            case "ninja":
+                ataque = "usou uma shuriken";
+                break;
+            default:
+                ataque = "fez um ataque desconhecido";
+        }
+
+        console.log(`O ${this.tipo} atacou usando ${ataque}`);
+    }
+}
+
+// Exemplo de uso:
+const heroi1 = new Heroi("Arcturus", 30, "mago");
+heroi1.atacar();
+
+const heroi2 = new Heroi("Ragnar", 40, "guerreiro");
+heroi2.atacar();
